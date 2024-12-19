@@ -9,8 +9,10 @@ colors.setTheme({
 	error: 'red',
 });
 
+////
 let status = parseInt(process.env.COLORS_ENABLED);
 const defaultStatus = config.get('COLORS_ENABLED');
+//// це бажано робити у файлі config/custom-environment-variables.yml
 
 if (Number.isNaN(status) || !(status >= 0 && status <= 1)) {
 	console.warn(
